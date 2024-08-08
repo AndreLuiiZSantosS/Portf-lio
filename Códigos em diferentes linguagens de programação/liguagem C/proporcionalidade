@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+
+int soma(int a){
+  int SOMA;
+  SOMA = a * 4 ;
+  return SOMA;
+}
+int main (){ 
+  int a, SOMA; 
+  scanf ("%d", &a);
+SOMA = soma (a);
+printf("%d\n", SOMA);
+}
