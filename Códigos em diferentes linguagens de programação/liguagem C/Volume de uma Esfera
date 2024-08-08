@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  double R, R1, A;
+  scanf ("%lf", &R);
+  R1 = R*R*R;
+  A = ((4.0/3) * 3.14159 * R1);
+  printf("VOLUME = %.3f\n",A);
+  return 0;
+}
