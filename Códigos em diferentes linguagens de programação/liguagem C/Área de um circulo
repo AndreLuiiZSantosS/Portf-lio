@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  double ra;
+  double n = 3.14159;
+  scanf ("%lf", &ra);
+  double area = n * pow(ra, 2);
+  printf("A=%.4f\n",area);
+  return 0;
+}
