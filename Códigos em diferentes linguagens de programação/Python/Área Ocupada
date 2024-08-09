@@ -1,0 +1,13 @@
+valor1 = input().split( )
+A = int(valor1[0])
+B = int(valor1[1])
+C = int(valor1[2])
+valor2 = input().split( )
+D = int(valor2[0])
+E = int(valor2[1])
+F = int(valor2[2])
+G = (D//A) 
+H = (E//B) 
+I = (F//C)
+SOMA = G * H * I
+print(SOMA)
