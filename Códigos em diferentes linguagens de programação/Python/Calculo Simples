@@ -1,0 +1,10 @@
+valor1 = input().split(' ')
+A = int(valor1[1])
+B = float(valor1[2])
+C = A * B 
+valor2 = input().split(' ')
+D = int(valor2[1])
+E = float(valor2[2])
+F = D * E 
+soma = C + F
+print("VALOR A PAGAR: R$ {:.2f}". format (soma))
