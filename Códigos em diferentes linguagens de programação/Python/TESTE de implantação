@@ -1,0 +1,116 @@
+# Programa de gerenciamento do Campeonato de Fórmula 1 de 2024
+
+# Dicionário de usuários (login: senha)
+usuarios = {"admin": "admin"}  # Apenas o usuário "admin" tem permissão especial
+
+
+# Dicionário de pilotos (nome: equipe)
+pilotos = {
+    "Max Verstappen": "Red Bull Racing Honda",
+    "Sergio Perez": "Red Bull Racing Honda",
+    "Lewis Hamilton": "Mercedes-AMG PETRONAS F1 Team",
+    "George Russell": "Mercedes-AMG PETRONAS F1 Team",
+    "Charles Leclerc": "Scuderia Ferrari",
+    "Carlos Sainz": "Scuderia Ferrari",
+    "Oscar Piastri": "McLaren",
+    "Liam Lawson": "Red Bull Racing",
+    "Mick Schumacher": "Mercedes-AMG PETRONAS F1 Team",
+    "Frederik Vesti": "Mercedes-AMG PETRONAS F1 Team",
+    "Oliver Bearman": "Scuderia Ferrari",
+    "Antonio Giovinazzi": "Scuderia Ferrari",
+    "Robert Shwartzman": "Scuderia Ferrari",
+    "Felipe Drugovich": "Aston Martin",
+    "Ryo Hirakawa": "McLaren",
+    "Pato O’Ward": "McLaren",
+    "Jack Doohan": "Alpine",
+    "Liam Lawson": "Visa Cash App RB"
+    # Adicione os outros pilotos aqui
+}
+
+# Dicionário de equipes (nome: pontos)
+equipes = {
+    "Mercedes": 100,
+    "Red Bull": 90,
+    "Ferrari": 80,
+    "McLaren": 70,
+    "Aston Martin": 60,
+    "Alpine": 50,
+    "Sauber Strike": 40,
+    "RB Visa Cash App": 30,
+    "Haas": 20,
+    "Williams": 10
+    # Adicione outras equipes aqui
+}
+
+# Dicionário de resultados das corridas anteriores (nome da corrida: vencedor, carro, tempo de corrida)
+resultados_corridas = {
+    "GP do Bahrein": ("Max Verstappen", "Red Bull Racing Honda", "1:31:44.742"),
+    "GP da Arábia Saudita": ("Max Verstappen", "Red Bull Racing Honda", "1:20:43.273"),
+    "GP da Austrália": ("Carlos Sainz", "Ferrari", "1:20:26.843"),
+    "GP do Japão": ("Max Verstappen", "Red Bull Racing Honda", "1:54:23.566")
+    # Adicione outros resultados aqui
+}
+
+# Função para fazer login
+def fazer_login():
+    while True:
+        login = input("Digite seu login: ")
+        senha = input("Digite sua senha: ")
+        if login in usuarios and usuarios[login] == senha:
+            print("Login bem-sucedido!")
+            return
+        else:
+            print("Login ou senha incorretos. Tente novamente.")
+
+# Função para exibir o menu principal
+def exibir_menu_principal():
+    print("\nMenu Principal:")
+    print("1. Notícias")
+    print("2. Corridas")
+    print("3. Pilotos")
+    opcao = input("Escolha uma opção (1/2/3): ")
+    if opcao == "1":
+        exibir_noticias()
+    elif opcao == "2":
+        exibir_menu_corridas()
+    elif opcao == "3":
+        exibir_pilotos()
+    else:
+        print("Opção inválida. Tente novamente.")
+
+# Função para exibir as notícias
+def exibir_noticias():
+    print("\nNotícias sobre o Campeonato de Fórmula 1 de 2024:")
+    # Aqui você pode adicionar as notícias reais do campeonato
+
+# Função para exibir o menu de corridas
+def exibir_menu_corridas():
+    print("\nMenu de Corridas:")
+    print("1. Corridas Anteriores")
+    # Adicione outras opções de menu aqui
+
+# Função para exibir as corridas anteriores
+def exibir_corridas_anteriores():
+    print("\nCorridas Anteriores:")
+    for corrida, resultado in resultados_corridas.items():
+        vencedor, carro, tempo = resultado
+        print(f"{corrida}: Vencedor - {vencedor} ({carro}), Tempo de Corrida - {tempo}")
+
+# Função para exibir as corridas futuras
+def exibir_corridas_futuras():
+    print("\nCorridas Futuras:")
+    # Aqui você pode listar as corridas que ainda serão realizadas
+
+# Função para exibir a lista de pilotos (apenas para o usuário "admin")
+def exibir_pilotos():
+    if input("Digite a senha de administração: ") == usuarios["admin"]:
+        print("\nLista de Pilotos:")
+        for piloto, equipe in pilotos.items():
+            print(f"{piloto} ({equipe})")
+    else:
+        print("Senha incorreta. Acesso negado.")
+
+# Programa principal
+if __name__ == "__main__":
+    fazer_login()
+    exibir_menu_principal()
