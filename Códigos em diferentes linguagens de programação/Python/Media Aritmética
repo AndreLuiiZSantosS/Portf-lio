@@ -1,0 +1,5 @@
+valor1 = input().split( )
+H = float(valor1[0])
+P = float(valor1[1])
+soma = H / P 
+print("{:.2f}".format(soma))
