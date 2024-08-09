@@ -1,7 +1,0 @@
-valor1 = input().split( )
-a = int(valor1[0])
-b = int(valor1[1])
-voltas = a//b
-soma = voltas * b 
-x = a - soma
-print (x)
