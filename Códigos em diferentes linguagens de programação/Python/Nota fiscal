@@ -1,0 +1,14 @@
+ENTRADA = input().split()
+CODIGO = int(ENTRADA[0])
+QUANTIDADE = int(ENTRADA[1])
+if CODIGO == 1:
+  total = QUANTIDADE *4.00
+elif CODIGO == 2:
+  total = QUANTIDADE *4.50
+elif CODIGO == 3:
+  total = QUANTIDADE *5.00
+elif CODIGO == 4:
+  total = QUANTIDADE *2.00
+elif CODIGO == 5:
+  total = QUANTIDADE *1.50
+print('Total: R$ {:.2f}' .format(total))
